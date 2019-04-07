@@ -1,0 +1,14 @@
+.bookstick{
+  // padding: 10% 7%;
+  .bookstick__container{
+    padding-top: 25vh;
+
+    .bookstick__ticket{
+      padding: 2%;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 20%;
+  }
+}

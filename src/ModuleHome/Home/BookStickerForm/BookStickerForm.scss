@@ -1,0 +1,17 @@
+.booksticker{
+  width: 60%;
+  margin: auto;
+  border: 1px solid #9b9b9b;
+  border-radius:5px;
+  display: flex;
+
+  .booksticker__select{
+    width: 50%;
+    margin: auto;
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+  }
+
+}

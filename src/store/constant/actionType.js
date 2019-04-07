@@ -1,0 +1,9 @@
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
+export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";
+export const LIST_MOVIE = "LIST_MOVIE";
+export const MOVIE = "MOVIE";
+export const GET_DETAIL_BOOK = "GET_DETAIL_BOOK";
+export const GET_ITEM = "GET_ITEM";
+export const BOOK_STICKET = "BOOK_STICKET";
+export const GET_HISTORY_BOOK = "GET_HISTORY_BOOK";

@@ -1,0 +1,65 @@
+.detail{
+  // padding: 10% 13%;
+  color: white;
+  background-color: rgb(10, 32, 41);
+
+  .detail__info{
+    padding-top: 25vh;
+
+    .detail__menu{
+      margin-top: 6rem;
+      .tabs__menu{
+        width: 50%;
+        margin: auto;
+      }
+      .appbar{
+        background-color: #fff;
+        border: 1px solid white;
+        border-radius: 5px;
+        height: 50vh;
+
+        .tabs{
+          margin-bottom: 2rem;
+        }
+
+        .detail__showbook{
+          flex-wrap: wrap;
+
+          a{
+
+            &:hover{
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+  @media screen and (max-width: 576px) {
+    padding: 10% 5%;
+
+    .detail__content{
+
+      p{
+        font-size: 1rem;
+      }
+      h1{
+        font-size: 1.5rem;
+      }
+    }
+
+    .detail__menu{
+
+      .tabs__menu{
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

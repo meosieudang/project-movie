@@ -1,0 +1,17 @@
+.signup{
+  width: 50%;
+  border: 1px solid;
+  padding: 2%;
+  margin-top: 8%;
+  border-radius: 5px;
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    border: none;
+    margin-top: 20%;
+
+    .d-flex{
+      flex-direction: column
+    }
+  }
+}

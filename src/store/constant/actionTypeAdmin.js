@@ -1,0 +1,9 @@
+export const GET_LIST_USER = "GET_LIST_USER";
+export const CREATE_USER = "CREATE_USER";
+export const CREATE_USER_ERROR = "CREATE_USER_ERROR";
+export const DELETE_USER = "DELETE_USER";
+export const GET_USER = "GET_USER";
+export const EDIT_USER = "EDIT_USER";
+export const CLOSE_DIALOG = "CLOSE_DIALOG";
+export const GET_AUTH = "GET_AUTH";
+export const SEARCH = "SEARCH";

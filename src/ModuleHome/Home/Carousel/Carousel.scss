@@ -1,0 +1,25 @@
+.carousel__slide{
+
+  img{
+    margin-top: 83px;
+  }
+
+  .slick-prev, .slick-next{
+    position: absolute;
+  }
+  .slick-next{
+    right: 4%
+  }
+  .slick-prev{
+    z-index: 1;
+    left: 2%;
+  }
+
+  @media screen and (max-width: 576px) {
+    .slick-prev, .slick-next{
+     display: none !important;
+    }
+  }
+}
+
+

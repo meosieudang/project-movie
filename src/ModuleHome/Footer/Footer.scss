@@ -1,0 +1,32 @@
+.footer{
+  background-color: #222;
+  height: 75vh;
+
+  .footer__container{
+    color: #fff;
+    padding: 0 10%;
+    padding-top: 5%;
+    text-align: center;
+    ul,li{
+
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer__apple{
+      font-size: 4rem;
+    }
+  }
+
+  .footer__border{
+    border: .3px solid white;
+    margin-top: 2rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    height: 130vh;
+
+
+  }
+}
