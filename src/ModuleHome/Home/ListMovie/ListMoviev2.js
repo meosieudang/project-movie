@@ -5,7 +5,7 @@ import styled from "styled-components";
 import CardMovie from "./CardMovie";
 
 const settings = {
-  autoplay: true,
+  // autoplay: true,
   infinite: true,
   speed: 500,
   slidesToShow: 3,

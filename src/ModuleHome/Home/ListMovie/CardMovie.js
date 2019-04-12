@@ -5,7 +5,10 @@ import {
   CardActionArea,
   CardMedia,
   CardActions,
-  IconButton
+  IconButton,
+  Fab,
+  CardContent,
+  Typography,
 } from "@material-ui/core";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
@@ -13,63 +16,67 @@ import styled from "styled-components";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import { Link } from "react-router-dom";
 
-const StyledCardMedia = styled(props => (
-  <CardMedia classes={{ root: "root" }} {...props} />
-))`
-  &.root {
-    height: 360px !important;
-  }
-`;
-
-const PlayIcon = styled(props => <PlayArrowIcon {...props} />)`
-  position: absolute;
+const Hover = styled.div`
   opacity: 0;
-  width: 50% !important;
-  height: 25% !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1rem !important;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px solid whitesmoke;
-  color: azure;
-  z-index: 10;
-
-  &:hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  transition: all 0.5s;
+  color: white;
+  &:hover{
     opacity: 1;
-    transition: all 0.5s;
+    color: white;
+    background: rgba(0,0,0,0.3);
+    .qw{
+      transition: all 0.5s;
+      transform: translateY(-50%);
+    }
+    .qe{
+      transition: all 0.5s;
+      transform: translateY(100%)
+    }
   }
-`;
+`
+
+const StylePlayIcon = styled(Fab)`
+  border: 2px solid white !important;
+  color: white !important;
+  background: transparent !important;
+  position: absolute;
+  transform: translateY(-150%);
+`
+
+const StyleButton = styled(Button)`
+  position: absolute !important;
+  transform: translateY(200%);
+`
 
 const CardMovie = ({ movie }) => {
   return (
-    <Card>
+    <Card style={{ position: 'relative' }}>
       <CardActionArea>
-        <a href={movie.Trailer} target={"_blank"}>
-          <PlayIcon />
-        </a>
-        <Link to={`/detail/${movie.MaPhim}`}>
-          <StyledCardMedia
-            image={movie.HinhAnh}
-            title={movie.TenPhim}
-            style={{ height: 140 }}
-          />
-        </Link>
+        <Hover>
+          <StylePlayIcon className='qw'>
+            <a href={movie.Trailer} target={"_blank"} className='text-white'>
+              <PlayArrowIcon />
+            </a>
+          </StylePlayIcon>
+          <StyleButton className='qe bg-info' color='inherit' variant='contained'
+            component={Link} to={`/detail/${movie.MaPhim}`}
+          >Detail</StyleButton>
+        </Hover>
+        <CardMedia
+          style={{ height: 300 }}
+          image={movie.HinhAnh}
+        />
       </CardActionArea>
-      <CardActions>
-        <IconButton>
-          <ShareIcon color="primary" />
-        </IconButton>
-        <IconButton>
-          <FavoriteIcon color="secondary" />
-        </IconButton>
-        <Link to={`/detail/${movie.MaPhim}`} style={{ textDecoration: "none" }}>
-          <Button size="small" color="primary">
-            Learn More
-          </Button>
-        </Link>
-      </CardActions>
+      <CardContent>
+        <Typography variant='h6'>{movie.TenPhim}</Typography>
+      </CardContent>
     </Card>
   );
 };
