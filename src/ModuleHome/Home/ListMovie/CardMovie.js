@@ -25,7 +25,7 @@ const Hover = styled.div`
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  transition: all 0.5s;
+  /* transition: all 0.5s; */
   color: white;
   &:hover{
     opacity: 1;
@@ -52,7 +52,7 @@ const StylePlayIcon = styled(Fab)`
 
 const StyleButton = styled(Button)`
   position: absolute !important;
-  transform: translateY(200%);
+  transform: translateY(150%);
 `
 
 const CardMovie = ({ movie }) => {

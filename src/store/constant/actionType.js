@@ -7,3 +7,6 @@ export const GET_DETAIL_BOOK = "GET_DETAIL_BOOK";
 export const GET_ITEM = "GET_ITEM";
 export const BOOK_STICKET = "BOOK_STICKET";
 export const GET_HISTORY_BOOK = "GET_HISTORY_BOOK";
+export const GET_MOVIE_EDIT = "GET_MOVIE_EDIT";
+export const CLEAR_ERROR = "CLEAR_ERROR";
+export const UPDATE_MOVIE_SUCCESS = "UPDATE_MOVIE_SUCCESS";

@@ -3,7 +3,8 @@ import * as type from "../constant/actionType";
 const initialState = {
   movies: [],
   movie: {},
-  historyBook: []
+  historyBook: [],
+  movieEdit: {}
 };
 
 const movie = (state = initialState, action) => {
@@ -22,6 +23,24 @@ const movie = (state = initialState, action) => {
     case type.GET_HISTORY_BOOK:
       // console.log(action);
       return { ...state, historyBook: [...action.payload.DanhSachVeDaDat] };
+
+    case type.GET_MOVIE_EDIT:
+      return { ...state, movieEdit: action.payload };
+
+    case type.CLEAR_ERROR:
+      return {
+        ...state,
+        movieEdit: {}
+      };
+
+    case type.UPDATE_MOVIE_SUCCESS:
+      const tempMovies = state.movies.filter(
+        item => item.MaPhim !== action.payload.MaPhim
+      );
+      return {
+        ...state,
+        movies: [action.payload, ...tempMovies]
+      };
     default:
       return { ...state };
   }

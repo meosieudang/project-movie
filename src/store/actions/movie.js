@@ -44,3 +44,24 @@ export const getHistoryBook = data => {
     payload: data
   };
 };
+
+//update movie
+export const updateMovie = data => dispatch => {
+  axios
+    .post("http://svcy2.myclass.vn/api/QuanLyPhim/CapNhatPhim", data)
+    .then(res =>
+      dispatch({ type: type.UPDATE_MOVIE_SUCCESS, payload: res.data })
+    )
+    .catch(err => console.log(err));
+};
+
+//get movie
+export const getMovieEdit = data => ({
+  type: type.GET_MOVIE_EDIT,
+  payload: data
+});
+
+//clear error
+export const clearError = () => ({
+  type: type.CLEAR_ERROR
+});

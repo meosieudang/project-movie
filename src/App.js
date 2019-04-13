@@ -8,10 +8,10 @@ import HistoryBookSticket from "./ModuleHome/HistoryBookSticket/HistoryBookStick
 import BookSticker from "./ModuleHome/BookSticker/BookSticker";
 import HomeAdmin from "./ModuleAdmin/HomeAdmin/HomeAdmin";
 import Snackbars from "./ulti/Snackbars/Snackbars";
-import MovieList from "./ModuleAdmin/Movie Management/MovieList/MovieList";
 import SignUpv2 from "./auth/SignUp/SignUpv2";
 import SignInv2 from "./auth/SignIn/SignInv2";
 import UserListv2 from "./ModuleAdmin/User Management/UserList/UserListv2";
+import MovieManagement from "./ModuleAdmin/Movie Management/MovieManagement";
 
 class App extends Component {
   state = {
@@ -88,7 +88,7 @@ class App extends Component {
 
           <Route exact path="/admin" component={HomeAdmin} />
           <Route path="/admin/user" component={UserListv2} />
-          <Route path="/admin/movie" component={MovieList} />
+          <Route path="/admin/movie" component={MovieManagement} />
         </Switch>
 
         <Snackbars
